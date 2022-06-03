@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+
+a {
+  text-decoration: none;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: "poppins", arial;
+}
+
+.nav-link {
+  border: 1px solid black;
+}
+.navbar-brand {
+  border: 1px solid black;
+  padding: 8;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
