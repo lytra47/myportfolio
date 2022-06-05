@@ -20,7 +20,7 @@ img {
 }
 
 .nav-container {
-  background-color: darkcyan;
+  background-color: #3700b3;
   a {
     color: white;
   }
@@ -30,7 +30,7 @@ header {
   justify-content: space-between;
   padding: 2em;
   .logo {
-    color: purple;
+    color: cyan;
     font-weight: bold;
   }
 
@@ -48,7 +48,7 @@ header {
 }
 
 .hero {
-  background-color: rgb(103, 203, 203);
+  background-color: #6200ee;
   color: white;
   display: grid;
   text-align: center;
@@ -59,7 +59,7 @@ header {
   margin: 0 auto;
   width: 200px;
   font-weight: bold;
-  color: darkorchid;
+  color: cyan;
 }
 
 section {
@@ -145,6 +145,9 @@ portfolio {
     display: grid;
     grid-template-columns: 40% auto;
   }
+  .featured-desc {
+    padding-right: 5%;
+  }
   .left,
   .portfolio-left {
     display: grid;
@@ -199,7 +202,7 @@ portfolio {
       display: block;
       bottom: 0;
       padding-block: 1%;
-      background-color: grey;
+      background-color: rgba(0, 0, 0, 0.104);
       width: 100%;
     }
 
@@ -216,6 +219,36 @@ portfolio {
     float: right;
     max-width: 500px;
   }
+  .featured {
+    position: relative;
+    .hero-design {
+      position: absolute;
+      display: block;
+      bottom: 0;
+      padding-block: 1%;
+      background-color: rgba(0, 0, 0, 0.104);
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .skills {
+    position: relative;
+    padding-left: 0;
+    .skills-container {
+      margin-left: 4em;
+    }
+    .hero-design {
+      box-sizing: border-box;
+      position: absolute;
+      display: block;
+      bottom: 0;
+      padding-block: 1%;
+      background-color: rgba(0, 0, 0, 0.104);
+      width: 100%;
+      text-align: center;
+    }
+  }
 }
 
 @media only screen and (min-width: 1250px) {
@@ -228,20 +261,34 @@ portfolio {
   .hero .content {
     padding: 6em 8em 6em 10em;
   }
+  .skills {
+    position: relative;
+    padding-left: 0;
+    .skills-container {
+      margin-left: 10em;
+    }
+  }
 }
 
 @media only screen and (min-width: 1500px) {
   header {
-    padding: 2em 2em 2em 20em;
+    padding: 2em 2em 2em 15em;
   }
   .hero .content {
-    padding: 6em 8em 6em 20em;
+    padding: 6em 8em 6em 15em;
     h1 {
       text-align: left;
     }
   }
 
   section {
-    padding: 10em 20em 4em 20em;
+    padding: 10em 15em 4em 15em;
+  }
+  .skills {
+    position: relative;
+    padding-left: 0;
+    .skills-container {
+      margin-left: 15em;
+    }
   }
 }
