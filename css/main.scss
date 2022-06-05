@@ -55,7 +55,6 @@ header {
   padding: 4em;
 }
 .subhead {
-  display: flex;
   margin: 0 auto;
   width: 200px;
   font-weight: bold;
@@ -136,6 +135,15 @@ portfolio {
 }
 
 @media only screen and (min-width: 800px) {
+  .nav-container {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+  }
+  .content {
+    padding-top: 8em;
+  }
   .featured,
   .portfolio {
     text-align: left;
@@ -174,7 +182,7 @@ portfolio {
 
 @media only screen and (min-width: 1050px) {
   .hero {
-    height: 89vh;
+    height: 100vh;
   }
   .featured,
   .portfolio,
@@ -204,10 +212,23 @@ portfolio {
       padding-block: 1%;
       background-color: rgba(0, 0, 0, 0.104);
       width: 100%;
+      transition: background-color 600ms ease;
+      svg {
+        fill: white;
+        transition: fill 600ms ease;
+      }
+    }
+    .hero-design:hover {
+      background-color: rgba(0, 0, 0, 0.247);
+      transition: background-color 600ms ease;
+      svg {
+        fill: cyan;
+        transition: fill 600ms ease;
+      }
     }
 
     .content {
-      padding: 6em 8em 6em 4em;
+      padding: 10em 8em 6em 4em;
 
       h1 {
         font-size: 3em;
@@ -229,6 +250,18 @@ portfolio {
       background-color: rgba(0, 0, 0, 0.104);
       width: 100%;
       text-align: center;
+      transition: background-color 600ms ease;
+      svg {
+        transition: fill 600ms ease;
+      }
+    }
+    .hero-design:hover {
+      background-color: rgba(0, 0, 0, 0.247);
+      transition: background-color 600ms ease;
+      svg {
+        fill: cyan;
+        transition: fill 600ms ease;
+      }
     }
   }
 
@@ -247,6 +280,19 @@ portfolio {
       background-color: rgba(0, 0, 0, 0.104);
       width: 100%;
       text-align: center;
+      transition: background-color 600ms ease;
+      svg {
+        fill: white;
+        transition: fill 600ms ease;
+      }
+    }
+    .hero-design:hover {
+      background-color: rgba(0, 0, 0, 0.247);
+      transition: background-color 600ms ease;
+      svg {
+        fill: cyan;
+        transition: fill 600ms ease;
+      }
     }
   }
 }
@@ -259,7 +305,7 @@ portfolio {
     padding: 10em 10em 4em 10em;
   }
   .hero .content {
-    padding: 6em 8em 6em 10em;
+    padding: 14em 8em 6em 10em;
   }
   .skills {
     position: relative;
@@ -275,7 +321,7 @@ portfolio {
     padding: 2em 2em 2em 15em;
   }
   .hero .content {
-    padding: 6em 8em 6em 15em;
+    padding: 20em 8em 6em 15em;
     h1 {
       text-align: left;
     }
