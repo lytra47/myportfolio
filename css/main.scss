@@ -46,6 +46,9 @@ header {
 .hero-design {
   display: none;
 }
+.hex {
+  display: none;
+}
 
 .hero {
   background-color: #6200ee;
@@ -95,11 +98,22 @@ section {
 }
 
 .skills-container ul li {
-  background: white;
-  padding: 2em;
+  background: transparent;
+  padding: 0.5em;
   border-radius: 1em;
   margin-bottom: 1em;
-
+  .skillbtn {
+    margin: auto;
+    background-color: cyan;
+    border-radius: 5px;
+    color: black;
+    padding: 13px;
+    width: 70%;
+  }
+  .skillbtn:hover {
+    background-color: darkcyan;
+    cursor: default;
+  }
   .icon-container {
     height: 100px;
     display: grid;
@@ -110,10 +124,6 @@ section {
       width: 150px;
     }
     &.two {
-      width: 150px;
-    }
-    &.three {
-      width: 150px;
     }
   }
   .skill-title {
@@ -140,6 +150,9 @@ portfolio {
     width: 100%;
     top: 0;
     z-index: 100;
+  }
+  .hex {
+    display: none;
   }
   .content {
     padding-top: 8em;
@@ -169,9 +182,23 @@ portfolio {
   }
   .skills-container ul {
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(2, auto);
     grid-gap: 1em;
+    .dune {
+      float: left;
+      width: 80%;
+    }
+    .skillbtnul {
+      float: right;
+      grid-template-columns: repeat(2, auto);
+      grid-gap: 2px;
+      .skillbtn {
+        width: 100%;
+        padding-inline: 20px;
+      }
+    }
   }
+
   .portfolio {
     padding-top: 7em;
   }
@@ -205,12 +232,13 @@ portfolio {
     display: block;
     padding: 0;
     position: relative;
+
     .hero-design {
       position: absolute;
       display: block;
       bottom: 0;
       padding-block: 1%;
-      background-color: rgba(0, 0, 0, 0.104);
+      background-color: transparent;
       width: 100%;
       transition: background-color 600ms ease;
       svg {
@@ -247,7 +275,7 @@ portfolio {
       display: block;
       bottom: 0;
       padding-block: 1%;
-      background-color: rgba(0, 0, 0, 0.104);
+      background-color: transparent;
       width: 100%;
       text-align: center;
       transition: background-color 600ms ease;
@@ -277,7 +305,7 @@ portfolio {
       display: block;
       bottom: 0;
       padding-block: 1%;
-      background-color: rgba(0, 0, 0, 0.104);
+      background-color: transparent;
       width: 100%;
       text-align: center;
       transition: background-color 600ms ease;
@@ -307,6 +335,7 @@ portfolio {
   .hero .content {
     padding: 14em 8em 6em 10em;
   }
+
   .skills {
     position: relative;
     padding-left: 0;
@@ -324,6 +353,13 @@ portfolio {
     padding: 20em 8em 6em 15em;
     h1 {
       text-align: left;
+    }
+  }
+  .hero {
+    .hex {
+      position: absolute;
+      display: block;
+      margin: -21% 0 0 63%;
     }
   }
 
