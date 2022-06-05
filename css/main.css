@@ -196,7 +196,12 @@ portfolio {
 
 @media only screen and (min-width: 1050px) {
   .hero {
-    height: 90vh;
+    height: 89vh;
+  }
+  .featured,
+  .portfolio,
+  .skills {
+    height: 100vh;
   }
   .nav-container {
     display: -ms-grid;
@@ -211,11 +216,17 @@ portfolio {
     padding: 4em;
   }
   .hero {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 66% auto;
-        grid-template-columns: 66% auto;
+    display: block;
     padding: 0;
+    position: relative;
+  }
+  .hero .hero-design {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    padding-block: 1%;
+    background-color: grey;
+    width: 100%;
   }
   .hero .content {
     padding: 6em 8em 6em 4em;
@@ -246,11 +257,14 @@ portfolio {
   header {
     padding: 2em 2em 2em 20em;
   }
-  section {
-    padding: 20em 20em 4em 20em;
-  }
   .hero .content {
     padding: 6em 8em 6em 20em;
+  }
+  .hero .content h1 {
+    text-align: left;
+  }
+  section {
+    padding: 10em 20em 4em 20em;
   }
 }
 /*# sourceMappingURL=main.css.map */
