@@ -26,9 +26,8 @@ img {
   }
 }
 header {
-  display: flex;
   justify-content: space-between;
-  padding: 2em;
+  padding: 1em;
   .logo {
     color: cyan;
     font-weight: bold;
@@ -36,9 +35,8 @@ header {
 
   ul {
     display: flex;
-    a {
-      display: block; //has to be added for padding to work
-      padding: 0 1em;
+    li {
+      margin: auto;
     }
   }
 }
@@ -83,6 +81,9 @@ section {
   font-weight: bold;
   font-size: 1.3em;
   display: block;
+}
+.featured-title:hover {
+  color: blue;
 }
 
 .featured-desc {
@@ -146,7 +147,10 @@ portfolio {
 
 @media only screen and (min-width: 800px) {
   .nav-container {
+    display: grid;
+    grid-template-columns: 66% auto;
     position: fixed;
+
     width: 100%;
     top: 0;
     z-index: 100;
@@ -204,6 +208,9 @@ portfolio {
   }
   .portfolio-container img {
     margin-left: 2em;
+  }
+  #carouselExampleControls {
+    margin-right: 1.2em;
   }
 }
 

@@ -22,35 +22,23 @@ img {
 .nav-container {
   background-color: #3700b3;
 }
-
 .nav-container a {
   color: white;
 }
 
 header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 2em;
+  justify-content: space-between;
+  padding: 1em;
 }
-
 header .logo {
   color: cyan;
   font-weight: bold;
 }
-
 header ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
-header ul a {
-  display: block;
-  padding: 0 1em;
+header ul li {
+  margin: auto;
 }
 
 .hero-design {
@@ -64,7 +52,6 @@ header ul a {
 .hero {
   background-color: #6200ee;
   color: white;
-  display: -ms-grid;
   display: grid;
   text-align: center;
   padding: 4em;
@@ -99,6 +86,10 @@ section {
   display: block;
 }
 
+.featured-title:hover {
+  color: blue;
+}
+
 .featured-desc {
   color: #3b3b3b;
   margin-bottom: 3em;
@@ -117,7 +108,6 @@ section {
   border-radius: 1em;
   margin-bottom: 1em;
 }
-
 .skills-container ul li .skillbtn {
   margin: auto;
   background-color: cyan;
@@ -126,29 +116,23 @@ section {
   padding: 13px;
   width: 70%;
 }
-
 .skills-container ul li .skillbtn:hover {
   background-color: darkcyan;
   cursor: default;
 }
-
 .skills-container ul li .icon-container {
   height: 100px;
-  display: -ms-grid;
   display: grid;
   place-content: center;
   margin: 0 auto;
 }
-
 .skills-container ul li .icon-container.one {
   width: 150px;
 }
-
 .skills-container ul li .skill-title {
   font-weight: bold;
   margin-top: 2em;
 }
-
 .skills-container ul li .featured-desc {
   margin-bottom: 2em;
 }
@@ -164,6 +148,8 @@ portfolio {
 
 @media only screen and (min-width: 800px) {
   .nav-container {
+    display: grid;
+    grid-template-columns: 66% auto;
     position: fixed;
     width: 100%;
     top: 0;
@@ -176,22 +162,19 @@ portfolio {
     padding-top: 8em;
   }
   .featured,
-  .portfolio {
+.portfolio {
     text-align: left;
   }
   .featured,
-  .portfolio-container {
-    display: -ms-grid;
+.portfolio-container {
     display: grid;
-    -ms-grid-columns: 40% auto;
-        grid-template-columns: 40% auto;
+    grid-template-columns: 40% auto;
   }
   .featured-desc {
     padding-right: 5%;
   }
   .left,
-  .portfolio-left {
-    display: -ms-grid;
+.portfolio-left {
     display: grid;
   }
   .right {
@@ -202,10 +185,8 @@ portfolio {
     padding-top: 7em;
   }
   .skills-container ul {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (auto)[2];
-        grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, auto);
     grid-gap: 1em;
   }
   .skills-container ul .dune {
@@ -214,8 +195,7 @@ portfolio {
   }
   .skills-container ul .skillbtnul {
     float: right;
-    -ms-grid-columns: (auto)[2];
-        grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, auto);
     grid-gap: 2px;
   }
   .skills-container ul .skillbtnul .skillbtn {
@@ -228,22 +208,22 @@ portfolio {
   .portfolio-container img {
     margin-left: 2em;
   }
+  #carouselExampleControls {
+    margin-right: 1.2em;
+  }
 }
-
 @media only screen and (min-width: 1050px) {
   .hero {
     height: 100vh;
   }
   .featured,
-  .portfolio,
-  .skills {
+.portfolio,
+.skills {
     height: 100vh;
   }
   .nav-container {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 66% auto;
-        grid-template-columns: 66% auto;
+    grid-template-columns: 66% auto;
   }
   header {
     padding: 2em 2em 2em 4em;
@@ -263,22 +243,18 @@ portfolio {
     padding-block: 1%;
     background-color: transparent;
     width: 100%;
-    -webkit-transition: background-color 600ms ease;
     transition: background-color 600ms ease;
   }
   .hero .hero-design svg {
     fill: white;
-    -webkit-transition: fill 600ms ease;
     transition: fill 600ms ease;
   }
   .hero .hero-design:hover {
     background-color: rgba(0, 0, 0, 0.247);
-    -webkit-transition: background-color 600ms ease;
     transition: background-color 600ms ease;
   }
   .hero .hero-design:hover svg {
     fill: cyan;
-    -webkit-transition: fill 600ms ease;
     transition: fill 600ms ease;
   }
   .hero .content {
@@ -303,21 +279,17 @@ portfolio {
     background-color: transparent;
     width: 100%;
     text-align: center;
-    -webkit-transition: background-color 600ms ease;
     transition: background-color 600ms ease;
   }
   .featured .hero-design svg {
-    -webkit-transition: fill 600ms ease;
     transition: fill 600ms ease;
   }
   .featured .hero-design:hover {
     background-color: rgba(0, 0, 0, 0.247);
-    -webkit-transition: background-color 600ms ease;
     transition: background-color 600ms ease;
   }
   .featured .hero-design:hover svg {
     fill: cyan;
-    -webkit-transition: fill 600ms ease;
     transition: fill 600ms ease;
   }
   .skills {
@@ -328,8 +300,7 @@ portfolio {
     margin-left: 4em;
   }
   .skills .hero-design {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     position: absolute;
     display: block;
     bottom: 0;
@@ -337,26 +308,21 @@ portfolio {
     background-color: transparent;
     width: 100%;
     text-align: center;
-    -webkit-transition: background-color 600ms ease;
     transition: background-color 600ms ease;
   }
   .skills .hero-design svg {
     fill: white;
-    -webkit-transition: fill 600ms ease;
     transition: fill 600ms ease;
   }
   .skills .hero-design:hover {
     background-color: rgba(0, 0, 0, 0.247);
-    -webkit-transition: background-color 600ms ease;
     transition: background-color 600ms ease;
   }
   .skills .hero-design:hover svg {
     fill: cyan;
-    -webkit-transition: fill 600ms ease;
     transition: fill 600ms ease;
   }
 }
-
 @media only screen and (min-width: 1250px) {
   header {
     padding: 2em 2em 2em 10em;
@@ -375,7 +341,6 @@ portfolio {
     margin-left: 10em;
   }
 }
-
 @media only screen and (min-width: 1500px) {
   header {
     padding: 2em 5em 2em 36em;
@@ -401,5 +366,4 @@ portfolio {
   .skills .skills-container {
     margin-left: 15em;
   }
-}
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
