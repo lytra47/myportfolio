@@ -107,6 +107,10 @@ section {
 .projects {
   margin-bottom: 3em;
 }
+.projects .carousel {
+  width: 95%;
+  margin: auto;
+}
 
 .skills {
   background-color: #6200ee;
@@ -125,10 +129,12 @@ section {
   color: black;
   padding: 13px;
   width: 70%;
+  transition: all 300ms ease;
 }
 .skills-container ul li .skillbtn:hover {
   background-color: rgb(255, 255, 255);
   cursor: default;
+  transition: all 300ms ease;
 }
 .skills-container ul li .icon-container {
   height: 100px;
@@ -144,13 +150,47 @@ section {
   margin-bottom: 2em;
 }
 
-portfolio {
-  background-color: #f7f7f7;
+.accord {
+  width: 90%;
+  margin: 2em auto;
 }
 
-.portfolio-container a img {
-  border-radius: 1em;
-  margin-bottom: 2em;
+.accord-item {
+  margin: 1rem 0;
+}
+
+.accord-item-header {
+  color: grey;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.accord-item-header::after {
+  content: "+";
+  position: absolute;
+  right: 1rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.accord-item-header.active::after {
+  transform: rotate(45deg);
+}
+
+.accord-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.accord-item-body-content {
+  padding: 1rem;
+  line-height: 1.5rem;
+  border-top: 1px solid;
+  -o-border-image: linear-gradient(to right, green, yellow) 1;
+     border-image: linear-gradient(to right, green, yellow) 1;
 }
 
 @media only screen and (min-width: 800px) {
@@ -168,20 +208,17 @@ portfolio {
   .content {
     padding-top: 8em;
   }
-  .featured,
-.portfolio {
+  .featured {
     text-align: left;
   }
-  .featured,
-.portfolio-container {
+  .featured {
     display: grid;
     grid-template-columns: 40% auto;
   }
   .featured-desc {
     padding-right: 5%;
   }
-  .left,
-.portfolio-left {
+  .left {
     display: grid;
   }
   .right {
@@ -212,14 +249,11 @@ portfolio {
     width: 100%;
     padding-inline: 20px;
   }
-  .portfolio {
-    padding-top: 7em;
-  }
-  .portfolio-container img {
-    margin-left: 2em;
-  }
-  #carouselExampleControls {
-    margin-right: 1.2em;
+  #carouselfeatured {
+    width: 80% !important;
+    margin-left: auto;
+    margin-top: 10%;
+    margin-right: 3%;
   }
 }
 @media only screen and (min-width: 1050px) {
@@ -227,7 +261,6 @@ portfolio {
     height: 100vh;
   }
   .featured,
-.portfolio,
 .skills {
     height: 100vh;
   }
@@ -252,10 +285,6 @@ portfolio {
   .hero .content h1 {
     font-size: 3em;
     line-height: 1.2em;
-  }
-  .portfolio img {
-    float: right;
-    max-width: 500px;
   }
   .featured {
     position: relative;
