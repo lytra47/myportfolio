@@ -40,6 +40,11 @@ header {
     }
   }
 }
+hr {
+  width: 75%;
+  margin: auto;
+  margin-bottom: 2em;
+}
 
 .hero-design {
   display: none;
@@ -94,6 +99,10 @@ section {
   font-weight: 500;
 }
 
+.projects {
+  margin-bottom: 3em;
+}
+
 .skills {
   background-color: #6200ee;
 }
@@ -112,7 +121,7 @@ section {
     width: 70%;
   }
   .skillbtn:hover {
-    background-color: darkcyan;
+    background-color: rgb(255, 255, 255);
     cursor: default;
   }
   .icon-container {
@@ -120,12 +129,6 @@ section {
     display: grid;
     place-content: center;
     margin: 0 auto;
-
-    &.one {
-      width: 150px;
-    }
-    &.two {
-    }
   }
   .skill-title {
     font-weight: bold;
@@ -181,8 +184,11 @@ portfolio {
     margin-left: 2em;
     margin-top: 1em;
   }
+  .subtitle {
+    margin-top: 5em;
+  }
   .skills {
-    padding-top: 7em;
+    padding-top: 70%em;
   }
   .skills-container ul {
     display: grid;
@@ -240,28 +246,6 @@ portfolio {
     padding: 0;
     position: relative;
 
-    .hero-design {
-      position: absolute;
-      display: block;
-      bottom: 0;
-      padding-block: 1%;
-      background-color: transparent;
-      width: 100%;
-      transition: background-color 600ms ease;
-      svg {
-        fill: white;
-        transition: fill 600ms ease;
-      }
-    }
-    .hero-design:hover {
-      background-color: rgba(0, 0, 0, 0.247);
-      transition: background-color 600ms ease;
-      svg {
-        fill: cyan;
-        transition: fill 600ms ease;
-      }
-    }
-
     .content {
       padding: 10em 8em 6em 4em;
 
@@ -277,27 +261,6 @@ portfolio {
   }
   .featured {
     position: relative;
-    .hero-design {
-      position: absolute;
-      display: block;
-      bottom: 0;
-      padding-block: 1%;
-      background-color: transparent;
-      width: 100%;
-      text-align: center;
-      transition: background-color 600ms ease;
-      svg {
-        transition: fill 600ms ease;
-      }
-    }
-    .hero-design:hover {
-      background-color: rgba(0, 0, 0, 0.247);
-      transition: background-color 600ms ease;
-      svg {
-        fill: cyan;
-        transition: fill 600ms ease;
-      }
-    }
   }
 
   .skills {
@@ -305,29 +268,6 @@ portfolio {
     padding-left: 0;
     .skills-container {
       margin-left: 4em;
-    }
-    .hero-design {
-      box-sizing: border-box;
-      position: absolute;
-      display: block;
-      bottom: 0;
-      padding-block: 1%;
-      background-color: transparent;
-      width: 100%;
-      text-align: center;
-      transition: background-color 600ms ease;
-      svg {
-        fill: white;
-        transition: fill 600ms ease;
-      }
-    }
-    .hero-design:hover {
-      background-color: rgba(0, 0, 0, 0.247);
-      transition: background-color 600ms ease;
-      svg {
-        fill: cyan;
-        transition: fill 600ms ease;
-      }
     }
   }
 }
@@ -350,11 +290,48 @@ portfolio {
       margin-left: 10em;
     }
   }
+  .featured {
+    .hero-design {
+      svg {
+        fill: grey;
+      }
+    }
+  }
+  .hero-design {
+    box-sizing: border-box;
+    position: absolute;
+    display: block;
+    bottom: 0;
+    padding-block: 1%;
+    background-color: transparent;
+    width: 100%;
+    text-align: center;
+    transition: background-color 600ms ease;
+    svg {
+      fill: white;
+      transition: fill 600ms ease;
+    }
+  }
+  .hero-design:hover {
+    background-color: rgba(0, 0, 0, 0.247);
+    transition: background-color 600ms ease;
+    svg {
+      fill: cyan;
+      transition: fill 600ms ease;
+    }
+  }
 }
 
 @media only screen and (min-width: 1500px) {
   header {
     padding: 2em 5em 2em 36em;
+    ul {
+      margin-left: -4em;
+      margin-right: -5em;
+      li {
+        margin-inline: 1em;
+      }
+    }
   }
   .hero .content {
     padding: 20em 8em 6em 15em;
@@ -376,6 +353,7 @@ portfolio {
   .skills {
     position: relative;
     padding-left: 0;
+
     .skills-container {
       margin-left: 15em;
     }
