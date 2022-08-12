@@ -104,17 +104,6 @@ section {
   font-weight: 500;
 }
 
-.projects {
-  margin-bottom: 3em;
-}
-.projects h1 {
-  margin-top: 2em;
-}
-.projects .carousel {
-  width: 95%;
-  margin: auto;
-}
-
 .skills {
   background-color: #6200ee;
 }
@@ -153,52 +142,50 @@ section {
   margin-bottom: 2em;
 }
 
-.accord {
-  margin: 2em 0;
-}
-
-.accord-item {
+.projects {
   margin: 0;
-  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #eee;
+  margin-bottom: 3em;
 }
-
-.accord-item-header {
-  width: 100%;
-  background-color: black;
-  color: white;
+.projects .header2 {
+  background-color: #fff;
+  box-shadow: 0px 3px 6px rga(0, 0, 0, 0.1);
+}
+.projects .header2 .nav2 .tabs {
+  list-style-type: none;
   display: flex;
-  position: relative;
+  justify-content: flex-start;
+  background-color: royalblue;
+}
+.projects .header2 .nav2 .tabs .tab {
+  margin: auto;
+}
+.projects .header2 .nav2 .tabs .tab a[data-switcher] {
+  display: grid;
+  padding-block: 1em;
+  grid-template-columns: 25%;
+  text-decoration: none;
+  color: #fff;
+  background-color: royalblue;
   cursor: pointer;
-  font-size: 1.2rem;
-  font-weight: bold;
-  padding-block: 1.2em;
-  padding-left: 1em;
 }
-
-.accord-item-header::after {
-  content: "+";
-  position: absolute;
-  right: 1rem;
-  transition: transform 0.3s ease-in-out;
+.projects .header2 .nav2 .tabs .tab.is-active a[data-switcher] {
+  background-color: #f7a800;
+  font-weight: 700;
 }
-
-.accord-item-header.active::after {
-  transform: rotate(45deg);
+.projects .header2 .nav2 .tabs .tab:hover a[data-switcher] {
+  background-color: #f7a800;
 }
-
-.accord-item-body {
-  background-color: grey;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out;
+.projects .pages .page {
+  display: none;
 }
-
-.accord-item-body-content {
-  padding: 1rem;
-  line-height: 1.5rem;
-  border-top: 1px solid;
-  -o-border-image: linear-gradient(to right, green, yellow) 1;
-     border-image: linear-gradient(to right, green, yellow) 1;
+.projects .pages .page.is-active {
+  display: block;
+}
+.projects h1 {
+  margin-top: 2em;
 }
 
 @media only screen and (min-width: 800px) {

@@ -1,20 +1,26 @@
-const accordItemHeader = document.querySelectorAll(".accord-item-header");
+window.onload = () => {
+  const tabSwitchers = document.querySelectorAll("[data-switcher]");
+  for (let i = 0; i < tabSwitchers.length; i++) {
+    const tabSwitcher = tabSwitchers[i];
+    const pageId = tabSwitcher.dataset.tab;
 
-accordItemHeader.forEach((item) => {
-  item.addEventListener("click", (event) => {
-    // selecting active accordion for one item at a time to work
-    const activeAccord = document.querySelector(".accord-item-header.active");
-    if (activeAccord && activeAccord !== item) {
-      activeAccord.classList.toggle("active");
-      activeAccord.nextElementSibling.style.maxHeight = 0;
-    }
-    // checking if active class is added or not
-    item.classList.toggle("active");
-    const accordItemBody = item.nextElementSibling;
-    if (item.classList.contains("active")) {
-      accordItemBody.style.maxHeight = accordItemBody.scrollHeight + "px";
-    } else {
-      accordItemBody.style.maxHeight = 0;
-    }
-  });
-});
+    tabSwitcher.addEventListener("click", () => {
+      document
+        .querySelector(".tabs .tab.is-active")
+        .classList.remove("is-active");
+      tabSwitcher.parentNode.classList.add("is-active");
+      SwitchPage(pageId);
+    });
+  }
+};
+
+function SwitchPage(pageId) {
+  const currentPage = document.querySelector(".pages .page.is-active");
+  currentPage.classList.remove("is-active");
+
+  const nextPage = document.querySelector(
+    `.pages .page[data-page="${pageId}"]`
+  );
+
+  nextPage.classList.add("is-active");
+}
