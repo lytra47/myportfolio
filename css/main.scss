@@ -71,6 +71,15 @@ hr {
 section {
   padding: 4em 2em;
   text-align: center;
+  .pages {
+    background-color: rgb(23, 60, 173);
+    padding: 2em;
+    h2 {
+      margin-bottom: 1em;
+      color: white;
+    }
+    width: 100%;
+  }
 }
 .featured {
   position: relative;
@@ -169,12 +178,12 @@ section {
           }
         }
         .tab.is-active a[data-switcher] {
-          background-color: cyan;
+          background-color: rgb(23, 60, 173);
           font-weight: 700;
-          color: black;
+          color: white;
         }
         .tab:hover a[data-switcher] {
-          background-color: rgb(205, 206, 206);
+          background-color: cyan;
           color: black;
         }
       }
@@ -205,6 +214,10 @@ section {
     }
     top: 0;
     z-index: 100;
+  }
+  #carouselExampleControls {
+    margin: auto;
+    width: 75%;
   }
   .summary {
     width: 200%;

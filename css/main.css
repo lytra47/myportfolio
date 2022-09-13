@@ -75,6 +75,15 @@ section {
   padding: 4em 2em;
   text-align: center;
 }
+section .pages {
+  background-color: rgb(23, 60, 173);
+  padding: 2em;
+  width: 100%;
+}
+section .pages h2 {
+  margin-bottom: 1em;
+  color: white;
+}
 
 .featured {
   position: relative;
@@ -174,12 +183,12 @@ section {
   cursor: pointer;
 }
 .projects .header2 .nav2 .tabs .tab.is-active a[data-switcher] {
-  background-color: cyan;
+  background-color: rgb(23, 60, 173);
   font-weight: 700;
-  color: black;
+  color: white;
 }
 .projects .header2 .nav2 .tabs .tab:hover a[data-switcher] {
-  background-color: rgb(205, 206, 206);
+  background-color: cyan;
   color: black;
 }
 .projects .pages .page {
@@ -203,6 +212,10 @@ section {
   }
   .nav-container a {
     font-size: 17px;
+  }
+  #carouselExampleControls {
+    margin: auto;
+    width: 75%;
   }
   .summary {
     width: 200%;
