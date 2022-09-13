@@ -20,6 +20,8 @@ img {
 }
 
 .nav-container {
+  z-index: 100;
+  position: fixed;
   background-color: #3700b3;
 }
 .nav-container a {
@@ -28,6 +30,9 @@ img {
 }
 
 header {
+  background-color: #3700b3;
+  width: 100%;
+  position: fixed;
   justify-content: space-between;
   padding: 1em;
 }
@@ -76,17 +81,20 @@ section {
   text-align: center;
 }
 section .pages {
-  background-color: rgb(23, 60, 173);
+  background-color: rgb(255, 255, 255);
   padding: 2em;
   width: 100%;
 }
 section .pages h2 {
   margin-bottom: 1em;
-  color: white;
+  color: black;
 }
 
 .featured {
   position: relative;
+}
+.featured .card {
+  background-color: #6200ee;
 }
 
 .subtitle {
@@ -183,12 +191,12 @@ section .pages h2 {
   cursor: pointer;
 }
 .projects .header2 .nav2 .tabs .tab.is-active a[data-switcher] {
-  background-color: rgb(23, 60, 173);
+  background-color: white;
   font-weight: 700;
-  color: white;
+  color: black;
 }
 .projects .header2 .nav2 .tabs .tab:hover a[data-switcher] {
-  background-color: cyan;
+  background-color: rgb(59, 245, 245);
   color: black;
 }
 .projects .pages .page {
@@ -227,6 +235,9 @@ section .pages h2 {
   }
   .content {
     padding-top: 8em;
+  }
+  .cardleft {
+    margin-right: 20px;
   }
   .featured {
     text-align: left;
@@ -283,19 +294,12 @@ section .pages h2 {
   .hero {
     height: 100vh;
   }
-  .featured,
-.skills {
-    height: 100vh;
-  }
   .accordion-item {
     width: 500px;
   }
   .nav-container {
     display: grid;
     grid-template-columns: 66% auto;
-  }
-  header {
-    padding: 2em 2em 2em 4em;
   }
   section {
     padding: 4em;
@@ -324,9 +328,6 @@ section .pages h2 {
   }
 }
 @media only screen and (min-width: 1250px) {
-  header {
-    padding: 2em 2em 2em 10em;
-  }
   section {
     padding: 10em 10em 4em 10em;
   }
