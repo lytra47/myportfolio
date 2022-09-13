@@ -23,6 +23,7 @@ img {
   background-color: #3700b3;
   a {
     color: white;
+    font-size: 12px;
   }
 }
 header {
@@ -198,8 +199,10 @@ section {
     display: grid;
     grid-template-columns: 66% auto;
     position: fixed;
-
     width: 100%;
+    a {
+      font-size: 17px;
+    }
     top: 0;
     z-index: 100;
   }
