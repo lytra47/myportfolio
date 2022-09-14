@@ -30,6 +30,7 @@ img {
 }
 header {
   background-color: #3700b3;
+
   width: 100%;
   position: fixed;
   justify-content: space-between;
@@ -44,6 +45,9 @@ header {
     li {
       margin: auto;
     }
+    li:hover {
+      transform: scale(1.1);
+    }
   }
 }
 hr {
@@ -52,6 +56,21 @@ hr {
   margin-bottom: 2em;
 }
 
+.cardleft {
+  a {
+    color: white;
+    font-size: 57px;
+  }
+  a:hover {
+    color: cyan;
+  }
+  a:active {
+    color: #efefef;
+  }
+  a:visited {
+    color: #efefef);
+  }
+}
 .hero-design {
   display: none;
 }
@@ -182,16 +201,27 @@ section {
             text-decoration: none;
             color: #fff;
             background-color: royalblue;
+            border-top: 4px solid royalblue;
             cursor: pointer;
           }
         }
         .tab.is-active a[data-switcher] {
-          background-color: white;
+          border-top: 4px solid royalblue;
+          border-inline: 4px solid royalblue;
+          background-color: rgb(255, 255, 255);
+          transform: scaleZ(1.5);
           font-weight: 700;
           color: black;
+          margin-top: -5px;
+          height: 70px;
         }
         .tab:hover a[data-switcher] {
+          border: none;
+          margin-top: -5px;
+          height: 70px;
           background-color: rgb(59, 245, 245);
+          border-top: 4px solid royalblue;
+          border-inline: 4px solid royalblue;
           color: black;
         }
       }
@@ -240,6 +270,11 @@ section {
   }
   .cardleft {
     margin-right: 20px;
+    a {
+      margin-left: 30px;
+      color: white;
+      font-size: 40px;
+    }
   }
   .featured {
     text-align: left;
@@ -297,10 +332,10 @@ section {
   .hero {
     height: 100vh;
   }
-  .featured,
-  .skills {
-    // height: 100vh;
-  }
+  // .featured,
+  // .skills {
+  //   // height: 100vh;
+  // }
   .accordion-item {
     width: 500px;
   }
