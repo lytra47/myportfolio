@@ -56,21 +56,21 @@ hr {
   margin-bottom: 2em;
 }
 
-.cardleft i {
-  transition: all 600ms ease-out;
+.cardright i {
+  transition: all 400ms ease-out;
 }
-.cardleft i:hover {
-  transition: all 600ms ease-out;
+.cardright i:hover {
+  transition: all 400ms ease-out;
   transform: scale(1.2);
 }
-.cardleft a {
-  color: white;
+.cardright a {
+  color: black;
   font-size: 57px;
-  transition: all 600ms ease;
+  transition: all 400ms ease;
 }
-.cardleft a:hover {
-  transition: all 600ms ease-in;
-  color: cyan;
+.cardright a:hover {
+  transition: all 400ms ease-in;
+  color: #6200ee;
 }
 
 .hero-design {
@@ -218,12 +218,11 @@ section .pages h2 {
   font-weight: 700;
   color: black;
   margin-top: -5px;
-  height: 70px;
+  height: 68px;
 }
 .projects .header2 .nav2 .tabs .tab:hover a[data-switcher] {
-  transition: all 600ms ease;
+  transition: all 400ms ease;
   background-color: #ffffff;
-  border-inline: 4px solid royalblue;
   color: black;
 }
 .projects .pages .page {
@@ -266,9 +265,9 @@ section .pages h2 {
   .cardleft {
     margin-right: 20px;
   }
-  .cardleft a {
+  .cardright a {
     margin-left: 30px;
-    color: white;
+    color: black;
     font-size: 40px;
   }
   .featured {
@@ -385,19 +384,19 @@ section .pages h2 {
     background-color: transparent;
     width: 100%;
     text-align: center;
-    transition: background-color 600ms ease;
+    transition: background-color 400ms ease;
   }
   .hero-design svg {
     fill: white;
-    transition: fill 600ms ease;
+    transition: fill 400ms ease;
   }
   .hero-design:hover {
     background-color: rgba(0, 0, 0, 0.247);
-    transition: background-color 600ms ease;
+    transition: background-color 400ms ease;
   }
   .hero-design:hover svg {
     fill: cyan;
-    transition: fill 600ms ease;
+    transition: fill 400ms ease;
   }
 }
 @media only screen and (min-width: 1500px) {

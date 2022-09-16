@@ -56,22 +56,22 @@ hr {
   margin-bottom: 2em;
 }
 
-.cardleft {
+.cardright {
   i {
-    transition: all 600ms ease-out;
+    transition: all 400ms ease-out;
   }
   i:hover {
-    transition: all 600ms ease-out;
+    transition: all 400ms ease-out;
     transform: scale(1.2);
   }
   a {
-    color: white;
+    color: black;
     font-size: 57px;
-    transition: all 600ms ease;
+    transition: all 400ms ease;
   }
   a:hover {
-    transition: all 600ms ease-in;
-    color: cyan;
+    transition: all 400ms ease-in;
+    color: #6200ee;
   }
 }
 .hero-design {
@@ -216,15 +216,15 @@ section {
           font-weight: 700;
           color: black;
           margin-top: -5px;
-          height: 70px;
+          height: 68px;
         }
         .tab:hover a[data-switcher] {
-          transition: all 600ms ease;
+          transition: all 400ms ease;
           // margin-top: -5px;
           // height: 70px;
           background-color: #ffffff;
           // border-top: 4px solid royalblue;
-          border-inline: 4px solid royalblue;
+          // border-inline: 4px solid royalblue;
           color: black;
         }
       }
@@ -273,9 +273,11 @@ section {
   }
   .cardleft {
     margin-right: 20px;
+  }
+  .cardright {
     a {
       margin-left: 30px;
-      color: white;
+      color: black;
       font-size: 40px;
     }
   }
@@ -410,18 +412,18 @@ section {
     background-color: transparent;
     width: 100%;
     text-align: center;
-    transition: background-color 600ms ease;
+    transition: background-color 400ms ease;
     svg {
       fill: white;
-      transition: fill 600ms ease;
+      transition: fill 400ms ease;
     }
   }
   .hero-design:hover {
     background-color: rgba(0, 0, 0, 0.247);
-    transition: background-color 600ms ease;
+    transition: background-color 400ms ease;
     svg {
       fill: cyan;
-      transition: fill 600ms ease;
+      transition: fill 400ms ease;
     }
   }
 }
