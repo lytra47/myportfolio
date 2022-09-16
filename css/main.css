@@ -56,11 +56,20 @@ hr {
   margin-bottom: 2em;
 }
 
+.cardleft i {
+  transition: all 600ms ease-out;
+}
+.cardleft i:hover {
+  transition: all 600ms ease-out;
+  transform: scale(1.2);
+}
 .cardleft a {
   color: white;
   font-size: 57px;
+  transition: all 600ms ease;
 }
 .cardleft a:hover {
+  transition: all 600ms ease-in;
   color: cyan;
 }
 
@@ -204,7 +213,6 @@ section .pages h2 {
 }
 .projects .header2 .nav2 .tabs .tab.is-active a[data-switcher] {
   border-top: 4px solid royalblue;
-  border-inline: 4px solid royalblue;
   background-color: rgb(255, 255, 255);
   transform: scaleZ(1.5);
   font-weight: 700;
@@ -213,11 +221,8 @@ section .pages h2 {
   height: 70px;
 }
 .projects .header2 .nav2 .tabs .tab:hover a[data-switcher] {
-  border: none;
-  margin-top: -5px;
-  height: 70px;
-  background-color: rgb(59, 245, 245);
-  border-top: 4px solid royalblue;
+  transition: all 600ms ease;
+  background-color: #ffffff;
   border-inline: 4px solid royalblue;
   color: black;
 }

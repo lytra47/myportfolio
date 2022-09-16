@@ -57,18 +57,21 @@ hr {
 }
 
 .cardleft {
+  i {
+    transition: all 600ms ease-out;
+  }
+  i:hover {
+    transition: all 600ms ease-out;
+    transform: scale(1.2);
+  }
   a {
     color: white;
     font-size: 57px;
+    transition: all 600ms ease;
   }
   a:hover {
+    transition: all 600ms ease-in;
     color: cyan;
-  }
-  a:active {
-    color: #efefef;
-  }
-  a:visited {
-    color: #efefef);
   }
 }
 .hero-design {
@@ -207,7 +210,7 @@ section {
         }
         .tab.is-active a[data-switcher] {
           border-top: 4px solid royalblue;
-          border-inline: 4px solid royalblue;
+          // border-inline: 4px solid royalblue;
           background-color: rgb(255, 255, 255);
           transform: scaleZ(1.5);
           font-weight: 700;
@@ -216,11 +219,11 @@ section {
           height: 70px;
         }
         .tab:hover a[data-switcher] {
-          border: none;
-          margin-top: -5px;
-          height: 70px;
-          background-color: rgb(59, 245, 245);
-          border-top: 4px solid royalblue;
+          transition: all 600ms ease;
+          // margin-top: -5px;
+          // height: 70px;
+          background-color: #ffffff;
+          // border-top: 4px solid royalblue;
           border-inline: 4px solid royalblue;
           color: black;
         }
