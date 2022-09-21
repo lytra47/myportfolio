@@ -56,6 +56,18 @@ hr {
   margin-bottom: 2em;
 }
 
+.list-group-item {
+  border: none;
+}
+
+.contactsfooter {
+  .list-group-item {
+    border: none;
+  }
+  a {
+    color: white;
+  }
+}
 .cardright {
   i {
     transition: all 400ms ease-out;
@@ -110,7 +122,6 @@ section {
       margin-bottom: 1em;
       color: black;
     }
-    width: 100%;
   }
 }
 .featured {
@@ -196,26 +207,24 @@ section {
         list-style-type: none;
         display: flex;
         justify-content: flex-start;
-        background-color: royalblue;
+        background-color: #6200ee;
         .tab {
-          margin: auto;
           width: 25%;
 
           a[data-switcher] {
-            padding-left: 40%;
+            padding-left: 35%;
             display: grid;
             padding-block: 1em;
             grid-template-columns: 25%;
             text-decoration: none;
             color: #fff;
-            background-color: royalblue;
-            border-top: 4px solid royalblue;
+            background-color: #6200ee;
+            border-top: 4px solid #6200ee;
             cursor: pointer;
           }
         }
         .tab.is-active a[data-switcher] {
-          border-top: 4px solid royalblue;
-          // border-inline: 4px solid royalblue;
+          border-top: 4px solid #6200ee;
           background-color: rgb(255, 255, 255);
           transform: scaleZ(1.5);
           font-weight: 700;
@@ -225,11 +234,7 @@ section {
         }
         .tab:hover a[data-switcher] {
           transition: all 400ms ease;
-          // margin-top: -5px;
-          // height: 70px;
-          background-color: #ffffff;
-          // border-top: 4px solid royalblue;
-          // border-inline: 4px solid royalblue;
+          background-color: white;
           color: black;
         }
       }
@@ -250,6 +255,9 @@ section {
 }
 
 @media only screen and (min-width: 800px) {
+  .page {
+    width: 100%;
+  }
   .logoC {
     margin-top: 20%;
     font-size: 35px;
@@ -273,7 +281,6 @@ section {
   }
   #carouselExampleControls {
     margin: auto;
-    width: 75%;
   }
   .summary {
     width: 200%;

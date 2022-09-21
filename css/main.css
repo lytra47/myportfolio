@@ -56,6 +56,17 @@ hr {
   margin-bottom: 2em;
 }
 
+.list-group-item {
+  border: none;
+}
+
+.contactsfooter .list-group-item {
+  border: none;
+}
+.contactsfooter a {
+  color: white;
+}
+
 .cardright i {
   transition: all 400ms ease-out;
 }
@@ -109,7 +120,6 @@ section {
 section .pages {
   background-color: rgb(255, 255, 255);
   padding: 2em;
-  width: 100%;
 }
 section .pages h2 {
   margin-bottom: 1em;
@@ -200,25 +210,24 @@ section .pages h2 {
   list-style-type: none;
   display: flex;
   justify-content: flex-start;
-  background-color: royalblue;
+  background-color: #6200ee;
 }
 .projects .header2 .nav2 .tabs .tab {
-  margin: auto;
   width: 25%;
 }
 .projects .header2 .nav2 .tabs .tab a[data-switcher] {
-  padding-left: 40%;
+  padding-left: 35%;
   display: grid;
   padding-block: 1em;
   grid-template-columns: 25%;
   text-decoration: none;
   color: #fff;
-  background-color: royalblue;
-  border-top: 4px solid royalblue;
+  background-color: #6200ee;
+  border-top: 4px solid #6200ee;
   cursor: pointer;
 }
 .projects .header2 .nav2 .tabs .tab.is-active a[data-switcher] {
-  border-top: 4px solid royalblue;
+  border-top: 4px solid #6200ee;
   background-color: rgb(255, 255, 255);
   transform: scaleZ(1.5);
   font-weight: 700;
@@ -228,7 +237,7 @@ section .pages h2 {
 }
 .projects .header2 .nav2 .tabs .tab:hover a[data-switcher] {
   transition: all 400ms ease;
-  background-color: #ffffff;
+  background-color: white;
   color: black;
 }
 .projects .pages .page {
@@ -242,6 +251,9 @@ section .pages h2 {
 }
 
 @media only screen and (min-width: 800px) {
+  .page {
+    width: 100%;
+  }
   .logoC {
     margin-top: 20%;
     font-size: 35px;
@@ -264,7 +276,6 @@ section .pages h2 {
   }
   #carouselExampleControls {
     margin: auto;
-    width: 75%;
   }
   .summary {
     width: 200%;
